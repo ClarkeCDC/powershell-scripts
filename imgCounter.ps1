@@ -8,6 +8,5 @@ $o |Select-Object |Select fullName, Extension, creationTime,   @{n="Last Modifie
 
 
 $o |Group-Object -Property Extension |Select Count, Name
-$totalTime = "{0:HH:mm:ss}" -f ([datetime]$elapsedTime.Ticks)
 Write-host "Elapsed Time: $($elapsedTime.ToString("ss"))s"
 $o[1].GetAccessControl()
